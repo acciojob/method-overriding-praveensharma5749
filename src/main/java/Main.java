@@ -3,23 +3,21 @@
 public class Main
 {
     public static void main(String args[]){
-        B b1=new B();
-        b1.meth();
+        B obj = new B();
+        obj.meth();
 
-        B b2=new B();
-        b2.meth();
+        B obj1 = new B();
+        obj1.meth();
+
     }
-    public static class A
-    {
-        public String meth ()
-        {
+    public static class A {
+        public String meth() {
             return "Invoking method from class A";
         }
     }
-    public static class B extends A {
-        public String meth(){
-            System.out.println(super.meth());
-            return "Method is overridden in Extendend class B";
+        public static class B extends A{
+            public String meth(){
+                return "Method is overridden in Extendend class B";
+            }
         }
-    }
 }
